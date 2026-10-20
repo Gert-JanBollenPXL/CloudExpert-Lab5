@@ -175,7 +175,7 @@ jobs:
 
           tar -czf \
             "dist/node-service-${{ github.sha }}.tar.gz" \
-            src package.json package-lock.json node_modules \
+            src package.json package-lock.json \
             $(test -d node_modules && echo node_modules)
 
       - name: Generate checksum
